@@ -18,8 +18,6 @@ This portal helps the Sentient AGI team collect valuable feedback from the commu
 
 [Visit Feedback Portal](https://Sam50506.github.io/sentient-roma-feedback/)
 
-*(Replace `YOUR-USERNAME` with your actual GitHub username)*
-
 ## 💡 How to Use
 
 1. Click the **"Feedback"** button in the bottom-right corner
