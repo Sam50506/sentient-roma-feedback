@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sentient Roma Feedback</title>
-    <link rel="stylesheet" href="styles.css">  <!-- ADD THIS LINE -->
 </head>
 <body>
-    <!-- Particle Canvas -->
     <canvas id="particles"></canvas>
 
     <div class="container">
@@ -18,18 +16,29 @@
         <p class="subtitle">Rate your experience and share suggestions to help us evolve together.</p>
     </div>
 
-    <!-- Floating Feedback Button -->
+    <section class="feedback-wall">
+        <h2>Community Feedback & Suggestions</h2>
+        <p class="wall-subtitle">Upvote the best ideas or share your own thoughts!</p>
+        
+        <div id="feedbackList" class="feedback-list">
+            </div>
+
+        <div class="loading-indicator" id="loadingIndicator">
+            Loading past feedback...
+        </div>
+        
+        <button class="load-more-btn" id="loadMoreBtn" style="display: none;">Load More Feedback</button>
+    </section>
+
     <button class="feedback-btn" onclick="openModal()">
         <span class="feedback-icon">💬</span>
         <span>Feedback</span>
     </button>
 
-    <!-- Modal Overlay -->
     <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
         <div class="modal" onclick="event.stopPropagation()">
             <button class="close-btn" onclick="closeModal()">×</button>
             
-            <!-- Feedback Form -->
             <div id="feedbackForm">
                 <h2>Share Your Feedback</h2>
                 <p class="modal-subtitle">Help us make Roma better for everyone</p>
@@ -68,7 +77,6 @@
                 </form>
             </div>
 
-            <!-- Success Message -->
             <div class="success-message" id="successMessage">
                 <div class="success-icon">🌿</div>
                 <h3>Thanks for helping Sentient grow!</h3>
@@ -76,7 +84,5 @@
             </div>
         </div>
     </div>
-
-    <script src="script.js"></script>  <!-- ADD THIS LINE -->
 </body>
 </html>
