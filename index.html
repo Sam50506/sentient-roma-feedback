@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentient Roma Feedback</title>
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particles"></canvas>
+
+    <div class="container">
+        <div class="logo-wrapper">
+            <img src="https://i.postimg.cc/fySwfJcf/20250904-032927.png" alt="Sentient Logo" class="logo">
+        </div>
+        <h1>Help Sentient Improve Roma — Your Voice Matters.</h1>
+        <p class="subtitle">Rate your experience and share suggestions to help us evolve together.</p>
+    </div>
+
+    <!-- Floating Feedback Button -->
+    <button class="feedback-btn" onclick="openModal()">
+        <span class="feedback-icon">💬</span>
+        <span>Feedback</span>
+    </button>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            
+            <!-- Feedback Form -->
+            <div id="feedbackForm">
+                <h2>Share Your Feedback</h2>
+                <p class="modal-subtitle">Help us make Roma better for everyone</p>
+
+                <form id="submitForm" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label>Rating <span class="required">*</span></label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-value="1" onclick="setRating(1)">★</span>
+                            <span class="star" data-value="2" onclick="setRating(2)">★</span>
+                            <span class="star" data-value="3" onclick="setRating(3)">★</span>
+                            <span class="star" data-value="4" onclick="setRating(4)">★</span>
+                            <span class="star" data-value="5" onclick="setRating(5)">★</span>
+                        </div>
+                        <input type="hidden" id="ratingValue" name="rating" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback">Your Feedback <span class="required">*</span></label>
+                        <textarea id="feedback" name="feedback" placeholder="Share your thoughts, suggestions, or issues..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="discord">Discord Handle</label>
+                        <input type="text" id="discord" name="discord" placeholder="username#1234">
+                        <p class="info-text">Optional - so we can follow up if needed</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="twitter">Twitter Handle</label>
+                        <input type="text" id="twitter" name="twitter" placeholder="@username">
+                        <p class="info-text">Optional</p>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">Submit Feedback</button>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">🌿</div>
+                <h3>Thanks for helping Sentient grow!</h3>
+                <p>Your feedback has been submitted successfully.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
