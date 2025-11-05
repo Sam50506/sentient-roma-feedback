@@ -33,23 +33,5 @@ This portal helps the Sentient AGI team collect valuable feedback from the commu
 - Vanilla JavaScript
 - Canvas API for particle effects
 
-## 📝 Local Development
-
-1. Clone this repository
-```bash
-git clone https://github.com/Sam50506/sentient-roma-feedback.git
-Open index.html in your browser
-That's it! No build process needed.
-🤝 Contributing
-This is a community project for Sentient AGI. Feel free to:
-Report issues
-Suggest improvements
-Submit pull requests
-📄 License
-MIT License - Feel free to use and modify
-🔗 Links
-Sentient AGI Official
-Roma Testnet Info
-Community Discord
 Made with 💗 for the Sentient AGI Community
 ---
